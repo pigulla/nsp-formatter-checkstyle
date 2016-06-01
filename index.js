@@ -5,7 +5,7 @@ var Checkstyle = require('checkstyle-formatter');
 
 module.exports = function (err, data, pkgPath) {
     if (err) {
-        return 'Debug output: ' + JSON.stringify(Buffer.isBuffer(data) ? data.toString() : data) + '\n' + JSON.stringify(err);
+        return 'Debug output: ' + JSON.stringify(Buffer.isBuffer(data) ? data.toString() : data) + '\n' + err;
     }
 
     var messages = data.map(function (item) {
