@@ -1,0 +1,27 @@
+{
+  "name": "nsp-formatter-checkstyle",
+  "version": "1.0.0",
+  "description": "Checkstyle-comaptible formatter for the Node Security Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pigulla/nsp-formatter-checkstyle.git"
+  },
+  "keywords": [
+    "nsp",
+    "formatter",
+    "checkstyle"
+  ],
+  "author": "Raphael Pigulla <pigulla@four66.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pigulla/nsp-formatter-checkstyle/issues"
+  },
+  "homepage": "https://github.com/pigulla/nsp-formatter-checkstyle#readme",
+  "dependencies": {
+    "checkstyle-formatter": "1.0.0"
+  }
+}
