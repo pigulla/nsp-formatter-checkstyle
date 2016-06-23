@@ -1,7 +1,7 @@
 {
   "name": "nsp-formatter-checkstyle",
   "version": "1.0.1",
-  "description": "Checkstyle-comaptible formatter for the Node Security Project",
+  "description": "Checkstyle-compatible formatter for the Node Security Project",
   "main": "src/formatter.js",
   "engines": {
     "node": ">=0.10"
@@ -38,6 +38,6 @@
     "eslint": "2.13.1",
     "eslint-config-four66": "1.0.0",
     "mocha": "2.5.3",
-    "nsp": "2.4.0"
+    "nsp": "2.5.0"
   }
 }
