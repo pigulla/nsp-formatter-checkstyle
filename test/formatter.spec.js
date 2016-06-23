@@ -3,7 +3,7 @@
 var fs = require('fs');
 var path = require('path');
 var expect = require('chai').expect;
-var formatter = require('../src/formatter');
+var formatter = require('../');
 
 var findings = require('./fixtures/findings.json');
 
