@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "Checkstyle-comaptible formatter for the Node Security Project",
   "main": "src/formatter.js",
+  "engines": {
+    "node": ">=0.10"
+  },
   "scripts": {
     "test": "npm run lint && npm run mocha && npm run nsp",
     "lint": "eslint .",
