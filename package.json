@@ -1,10 +1,13 @@
 {
   "name": "nsp-formatter-checkstyle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Checkstyle-comaptible formatter for the Node Security Project",
-  "main": "index.js",
+  "main": "src/formatter.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint && npm run mocha && npm run nsp",
+    "lint": "eslint .",
+    "mocha": "mocha test/\\*\\*/\\*.spec.js",
+    "nsp": "nsp check"
   },
   "repository": {
     "type": "git",
@@ -15,7 +18,10 @@
     "formatter",
     "checkstyle"
   ],
-  "author": "Raphael Pigulla <pigulla@four66.com>",
+  "author": {
+    "name": "Raphael Pigulla",
+    "email": "pigulla@four66.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pigulla/nsp-formatter-checkstyle/issues"
@@ -23,5 +29,12 @@
   "homepage": "https://github.com/pigulla/nsp-formatter-checkstyle#readme",
   "dependencies": {
     "checkstyle-formatter": "1.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "eslint": "2.13.1",
+    "eslint-config-four66": "1.0.0",
+    "mocha": "2.5.3",
+    "nsp": "2.4.0"
   }
 }

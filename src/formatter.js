@@ -1,7 +1,7 @@
 'use strict';
 
 var Util = require('util');
-var Checkstyle = require('checkstyle-formatter');
+var checkstyle = require('checkstyle-formatter');
 
 module.exports = function (err, data, pkgPath) {
     if (err) {
@@ -20,7 +20,7 @@ module.exports = function (err, data, pkgPath) {
         };
     });
 
-    return Checkstyle([
+    return checkstyle([
         {
             filename: pkgPath,
             messages: messages
