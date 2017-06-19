@@ -1,24 +1,25 @@
-'use strict';
+const fs = require('fs');
+const path = require('path');
 
-var fs = require('fs');
-var path = require('path');
-var expect = require('chai').expect;
-var formatter = require('../');
+const source_dir = process.env.SOURCE_DIR || path.join('..', 'src'); // eslint-disable-line no-process-env
 
-var findings = require('./fixtures/findings.json');
+const expect = require('chai').expect;
+const formatter = require(path.join(source_dir, 'formatter'));
+
+const findings = require('./fixtures/findings.json');
 
 describe('formatter', function () {
     it('creates correct XML', function () {
-        var file = path.join(__dirname, 'fixtures', 'findings.xml');
-        var expected = fs.readFileSync(file).toString();
-        var actual = formatter(null, findings, 'package.json');
+        const file = path.join(__dirname, 'fixtures', 'findings.xml');
+        const expected = fs.readFileSync(file).toString();
+        const actual = formatter(null, findings, 'package.json');
 
         expect(actual).to.equal(expected);
     });
 
     describe('prints debug output on error', function () {
         it('when data is a buffer', function () {
-            var data = new Buffer('Foo!', 'utf-8'),
+            const data = new Buffer('Foo!', 'utf-8'),
                 actual = formatter(
                     new Error('Some nasty error'),
                     data,
@@ -29,7 +30,7 @@ describe('formatter', function () {
         });
 
         it('when data is not a buffer', function () {
-            var data = { foo: 'bar' },
+            const data = { foo: 'bar' },
                 actual = formatter(
                     new Error('Some nasty error'),
                     data,
